@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "AdminLogin";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post" action="loginAuthication">
+                <div class="form-group">
+                    <label>Enter User Name</label>
+                    <input type="text" name="txtUserName" class="form-control" id="txtUserName" required/>
+                </div>
+
+                <div class="form-group">
+                    <label>Enter Password</label>
+                    <input type="password" name="txtPassword" class="form-control" id="txtPassword" required/>
+                </div>
+
+                <input type="submit" value="Sign In" class="btn btn-primary"/>
+            </form>
+        </div>
+
+    </div>
+
+</div>

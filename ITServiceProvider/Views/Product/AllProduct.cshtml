@@ -1,0 +1,65 @@
+﻿@model IEnumerable<ITServiceProvider.Models.Product>
+
+@{
+    ViewBag.Title = "AllProduct";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+
+            <h2>All Softwares </h2>
+
+            <p class="btn btn-danger">
+                @Html.ActionLink("Add New Product", "Create")
+            </p>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ProductName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Features)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Price)
+                    </th>
+                    <th>Edit</th>
+                    <th>delete</th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProductName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Features)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                          </td>
+                        <td>
+                            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+<a href="@Url.Action("WorkingArea","Admin")">Back to Working Pannel </a>

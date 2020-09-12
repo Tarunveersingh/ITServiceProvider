@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ITServiceProvider.Models.Member>
+
+@{
+    ViewBag.Title = "OurTeam";
+}
+
+
+<div class="container">
+    <div class="row">
+        <h2>Our Team Members </h2>
+
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4">
+                    <img src="~/user.png" class="img-thumbnail"/>
+                    <h2>@Html.DisplayFor(modelItem => item.Name) </h2>
+                    <hr/>
+                    <p>  @Html.DisplayFor(modelItem => item.Skills) </p>
+                </div>
+            }
+
+
+        
+
+    </div>
+</div>

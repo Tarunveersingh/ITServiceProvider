@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ITServiceProvider.Models.Product>
+
+@{
+    ViewBag.Title = "OurProduct";
+}
+
+
+
+
+<div class="container">
+    <div class="row">
+        <h2>Our Software </h2>
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <img src="~/user.png" class="img-thumbnail" />
+                <h2>@Html.DisplayFor(modelItem => item.ProductName) </h2>
+                <hr />
+                <p>@Html.DisplayFor(modelItem => item.Features)  </p>
+                <a href="#" class="btn btn-success"> @Html.DisplayFor(modelItem => item.Price)</a>
+            </div>
+        }
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
